@@ -420,6 +420,7 @@ a {
     overflow: hidden;
     height: 617px;
     width: 680px;
+    cursor: pointer;
 }
 
 .product-2 p {
@@ -460,6 +461,7 @@ a {
     height: 617px;
     width: 680px;
     z-index: auto;
+    cursor: pointer;
 }
 
 .product-3 p {
@@ -480,15 +482,17 @@ a {
 }
 
 .product-3 img {
-    max-width: 220px;
-    width: 100%;
+    max-width: auto;
+    width: 450px;
     height: auto;
-    transition: transform 0.5s ease;   
+    transition: transform 0.5s ease;
+    mix-blend-mode: normal;
+    position: relative;   
 }
 
 
 .product-4{
-    background: #fbfbfd;
+    background: black;
     padding: 50px 30px;
     text-align: center;
     transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
@@ -519,11 +523,12 @@ a {
 }
 
 .product-4 img {
-    max-width: 220px;
-    width: 100%;
+    max-width: auto;
+    width: 600px;
     height: auto;
     transition: transform 0.5s ease;
-    mix-blend-mode: multiply;
+    mix-blend-mode: normal;
+    position: relative;   
 }
 
 .product-5{
