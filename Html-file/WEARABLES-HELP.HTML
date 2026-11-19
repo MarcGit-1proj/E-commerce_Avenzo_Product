@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wearables Help | Avenzo</title>
+    <link rel="stylesheet" href="../Css-file/style.css">
+    <link rel="stylesheet" href="../Css-file/WEARABLES-HELP.CSS">
+    <script src="../js-script/script.js" defer></script>
+</head>
+<body>
+    <nav class="top-block">
+        <div class="nav-content">
+            <div class="navigation-element-photos">
+                <img src="../images-png/LogoNew.png" alt="Logo" class="logo" draggable="false">
+            </div>
+            <div class="element-top">
+                <div class="dropdown1"><p class="dropdown-home">Products</p></div>
+                <div class="dropdown2"><p class="font-support">Support</p></div>
+                <div class="dropdown3"><p class="font-about-avenzo">About Avenzo</p></div>
+                <div class="dropdown4"><p class="font-contact">Contact</p></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="help-hero">
+        <a href="ECOM.HTML" class="back-button">&larr; Back to Home</a>
+        <h1>Avenzo Wearables Help</h1>
+        <p>Guides, fixes, and support for your Avenzo wearable.</p>
+        <div class="help-search">
+            <input type="text" placeholder="Search for help topics...">
+        </div>
+
+        <!-- MODEL SELECTOR -->
+        <div class="model-select">
+            <label for="wearableModel">Select your wearable model</label>
+            <select id="wearableModel">
+                <option value="avenzo-watch-1">Avenzo Watch 1</option>
+                <option value="avenzo-band-1">Avenzo Band 1</option>
+            </select>
+        </div>
+    </section>
+
+    <!-- HELP TOPIC GRID -->
+    <section class="help-grid">
+        <div class="help-card">
+            <div class="help-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#1d1d1f" stroke-width="1.5">
+                    <rect x="7" y="6" width="10" height="12" rx="3"/>
+                    <path d="M9 6V3h6v3"/>
+                    <path d="M9 18v3h6v-3"/>
+                </svg>
+            </div>
+            <h3>Setup &amp; Pairing</h3>
+            <p>First-time setup, companion app pairing, and watch faces.</p>
+            <a href="#">View guides &rarr;</a>
+        </div>
+
+        <div class="help-card">
+            <div class="help-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#1d1d1f" stroke-width="1.5">
+                    <rect x="2" y="7" width="18" height="10" rx="2"/>
+                    <line x1="22" y1="10" x2="22" y2="14"/>
+                    <line x1="6" y1="12" x2="14" y2="12"/>
+                </svg>
+            </div>
+            <h3>Battery &amp; Charging</h3>
+            <p>Charging tips, battery life, and power-saving settings.</p>
+            <a href="#">View guides &rarr;</a>
+        </div>
+
+        <div class="help-card">
+            <div class="help-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#1d1d1f" stroke-width="1.5">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                    <polyline points="7 12 10 12 11.5 9.5 13.5 14.5 15 12 17 12"/>
+                </svg>
+            </div>
+            <h3>Health &amp; Workouts</h3>
+            <p>Heart rate tracking, sleep monitoring, and workout modes.</p>
+            <a href="#">View guides &rarr;</a>
+        </div>
+
+        <div class="help-card">
+            <div class="help-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#1d1d1f" stroke-width="1.5">
+                    <path d="M21 12a9 9 0 1 1-3-6.7"/>
+                    <polyline points="21 3 21 9 15 9"/>
+                </svg>
+            </div>
+            <h3>Software &amp; Sync</h3>
+            <p>Firmware updates, notification alerts, and data syncing.</p>
+            <a href="#">View guides &rarr;</a>
+        </div>
+
+        <div class="help-card">
+            <div class="help-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#1d1d1f" stroke-width="1.5">
+                    <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>
+                </svg>
+            </div>
+            <h3>Water Resistance &amp; Care</h3>
+            <p>Swim/splash guidelines, strap care, and cleaning tips.</p>
+            <a href="#">View guides &rarr;</a>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="help-faq">
+        <h2>Frequently Asked Questions</h2>
+        <details>
+            <summary>My wearable won't turn on</summary>
+            <p>Place it on the charger for at least 15 to 30 minutes, then press and hold the side button for 10 seconds.</p>
+        </details>
+        <details>
+            <summary>Notifications aren't showing on my watch</summary>
+            <p>Check that Bluetooth is turned on and notification permissions are enabled in the companion app.</p>
+        </details>
+        <details>
+            <summary>Wearable isn't syncing with my phone</summary>
+            <p>Toggle Bluetooth off and on, keep both devices close together, and reopen the companion app.</p>
+        </details>
+        <details>
+            <summary>Battery drains faster than usual</summary>
+            <p>Lower screen brightness, turn off Always-On Display, and check for recent firmware updates.</p>
+        </details>
+    </section>
+</body>
+</html>
