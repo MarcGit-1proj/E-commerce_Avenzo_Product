@@ -333,7 +333,8 @@ a {
     overflow: hidden;
     position: relative;
     top:  -80px;
-    left: 15px;
+    left: 0px;
+    z-index: 900;
 }
 
 .avenzophone-front {
@@ -377,7 +378,7 @@ a {
     height: auto;
     display: block;
     margin-top: 40px;
-    margin-bottom: -6px;
+    margin-bottom: -0px;
     mix-blend-mode: multiply;
 }
 
@@ -392,14 +393,21 @@ a {
 .product-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+    gap: 15px;
     padding: 60px 40px;
     background-color: #ffffff;
     max-width: 1200px;
     margin: 0 auto;
+    position: relative;
+    z-index: 500;
+    bottom: 127px;
+    right: 148px;
+
 }
 
-.product-2, .product-3, .product-4 {
+
+
+.product-2{
     background: #fbfbfd;
     padding: 50px 30px;
     text-align: center;
@@ -411,10 +419,55 @@ a {
     position: relative;
     overflow: hidden;
     height: 617px;
-    width: 580px;
+    width: 680px;
+}
+
+.product-2 p {
+ font-size: 16px;
+    color: black;
+    margin: 0 0 25px 0;
+    line-height: 1.4;
+}
+
+.product-2 h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: black;
+    margin: 0 0 8px 0;
+    letter-spacing: -0.5px;
 }
 
 .product-3{
+    background: black;
+    padding: 50px 30px;
+    text-align: center;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    height: 617px;
+    width: 680px;
+}
+
+.product-3 p {
+ font-size: 16px;
+    color: white;
+    margin: 0 0 25px 0;
+    line-height: 1.4;
+}
+
+.product-3 h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: white;
+    margin: 0 0 8px 0;
+    letter-spacing: -0.5px;
+}
+
+.product-4{
     background: #fbfbfd;
     padding: 50px 30px;
     text-align: center;
@@ -426,26 +479,34 @@ a {
     position: relative;
     overflow: hidden;
     height: 617px;
-    width: 580px;
+    width: 680px;
+    grid-column: 1 / 3;
 }
 
-/* Hover effect na parang lumulutang (Apple card style) */
-.product-2:hover, .product-3:hover, .product-4:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+.product-4 p {
+ font-size: 16px;
+    color: white;
+    margin: 0 0 25px 0;
+    line-height: 1.4;
+}
+
+.product-4 h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: white;
+    margin: 0 0 8px 0;
+    letter-spacing: -0.5px;
 }
 
 .product-container h2 {
     font-size: 28px;
     font-weight: 700;
-    color: #1d1d1f;
     margin: 0 0 8px 0;
     letter-spacing: -0.5px;
 }
 
 .product-container p {
     font-size: 16px;
-    color: #6e6e73;
     margin: 0 0 25px 0;
     line-height: 1.4;
 }
@@ -458,9 +519,6 @@ a {
     mix-blend-mode: multiply; 
 }
 
-.product-2:hover img, .product-3:hover img, .product-4:hover img {
-    transform: scale(1.05);
-}
 /* Floating Cart Menu */
 .cart-dropdown {
     position: absolute;
@@ -491,4 +549,3 @@ a {
     font-size: 14px;
     margin: 0;
 }
-
