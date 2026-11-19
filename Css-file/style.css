@@ -9,6 +9,7 @@ body {
     user-select: none;
     margin: 0;
     padding: 0;
+    background-color: rgb(248, 247, 247)
 }
 
 a {
@@ -56,6 +57,7 @@ a {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    margin-left: 26px;
 }
 
 .dropdown1, .dropdown2, .dropdown3, .dropdown4  {
@@ -254,6 +256,7 @@ a {
     height: calc(100vh - 48px);
     overflow: hidden;
     background-color: #000;
+    margin-top: -30px;
 }
 
 .video-container video {
@@ -372,8 +375,8 @@ a {
     mix-blend-mode: multiply;
 }
 
-.product-1 img:hover {
-    transform: scale(1.02);
+.product-1{
+    margin-top: 100px;
 }
 
 /* ============================
@@ -504,3 +507,4 @@ a {
     font-size: 14px;
     margin: 0;
 }
+
