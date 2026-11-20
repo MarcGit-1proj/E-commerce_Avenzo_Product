@@ -831,12 +831,5 @@ a {
 }
 
 .dropdown0:hover .font-home {
-    color: rgb(253, 13, 13);
-}
-.dropdown1, .dropdown2, .dropdown3, .dropdown4 {
-    cursor: pointer;
-    padding: 14px 5px;
-    transition: color .25s ease;
-    display: flex;
-    align-items: center;
+    color: red;
 }
