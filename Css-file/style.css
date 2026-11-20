@@ -702,8 +702,6 @@ a {
   padding: 24px 0;
   overflow: hidden;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  position: relative;
-  bottom: 130px;
 }
 
 .carousel-viewport {
@@ -782,7 +780,7 @@ a {
   align-items: center;
   gap: 8px;
   margin-top: 16px;
-}
+}  
 
 .carousel-dot {
   width: 8px;
@@ -814,25 +812,31 @@ a {
     font-size: 13px;
   }
 }
-
-.footer-block {
-    background-color: black;
-    height: 300px;
-    width: 105%;
-    position: relative;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
-    z-index: 900;
+/*new button*/
+.dropdown0 {
+    cursor: pointer;
+    padding: 14px 5px;
+    transition: color .25s ease;
+    display: flex;
+    align-items: center;
 }
 
-.footer-element-font1 {
-    width: 300px;
-    height: 200px;
-    top: 40px;
-    left: 200px;
-    position: relative;
+.font-home {
+    color: rgba(255, 255, 255, .8);
+    font-size: 13px;
+    text-decoration: none;
+    transition: color .25s ease;
+    margin: 0;
+    line-height: normal;
 }
 
-.footer-element-font1 p{
-   color: rgba(255, 255, 255, .8);
-   gap: 10px;
+.dropdown0:hover .font-home {
+    color: red;
+}
+.dropdown1, .dropdown2, .dropdown3, .dropdown4 {
+    cursor: pointer;
+    padding: 14px 5px;
+    transition: color .25s ease;
+    display: flex;
+    align-items: center;
 }
