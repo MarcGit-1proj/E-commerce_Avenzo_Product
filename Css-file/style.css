@@ -780,7 +780,7 @@ a {
   align-items: center;
   gap: 8px;
   margin-top: 16px;
-}
+}  
 
 .carousel-dot {
   width: 8px;
@@ -811,4 +811,21 @@ a {
     gap: 12px;
     font-size: 13px;
   }
+}
+/*new button*/
+.dropdown0 {
+    cursor: pointer;
+    padding: 14px 5px;
+    transition: color .25s ease;
+}
+
+.font-home {
+    color: rgba(255, 255, 255, .8);
+    font-size: 13px;
+    text-decoration: none;
+    transition: color .25s ease;
+}
+
+.dropdown0:hover .font-home {
+    color: red;
 }
