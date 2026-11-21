@@ -6,6 +6,8 @@
     <title>Sign In | Avenzo</title>
     <link rel="stylesheet" href="../Css-file/style.css">
     <link rel="stylesheet" href="../Css-file/LOGIN.CSS">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../js-script/auth.js" defer></script>
     <script src="../js-script/script.js" defer></script>
 </head>
 <body>
@@ -26,43 +28,65 @@
     </nav>
 
     <!-- LOGIN / CHECKOUT SECTION -->
-    <section class="login-page">
-        <h1 class="login-heading">Sign in for faster checkout.</h1>
+<section class="login-page">
+    <h1 class="login-heading">Sign in for faster checkout.</h1>
 
-        <div class="login-columns">
+    <div class="login-columns">
 
-            <!-- LEFT: SIGN IN -->
-            <div class="login-col">
-                <h2>Check out with your Avenzo Account</h2>
+        <!-- LEFT: SIGN IN -->
+        <div class="login-col">
+            <h2>Check out with your Avenzo Account</h2>
 
-                <form class="signin-form" onsubmit="return false;">
-                    <div class="input-wrap">
-                        <input type="text" id="emailOrPhone" placeholder="Email or Phone Number" required>
-                        <button type="submit" class="arrow-btn" aria-label="Submit">&#8594;</button>
-                    </div>
-                </form>
+            <form class="signin-form" onsubmit="return false;">
+                <div class="input-wrap">
+                    <input type="email" id="loginEmail" placeholder="Email" required>
+                </div>
+                <div class="input-wrap">
+                    <input type="password" id="loginPassword" placeholder="Password" required>
+                    <button type="submit" class="arrow-btn" aria-label="Submit">&#8594;</button>
+                </div>
+            </form>
 
-                <label class="remember-me">
-                    <input type="checkbox" id="remember">
-                    Remember me
-                </label>
+            <label class="remember-me">
+                <input type="checkbox" id="remember">
+                Remember me
+            </label>
 
-                <a href="#" class="forgot-link">Forgotten your password?</a>
-            </div>
+            <p class="login-hint" id="loginHint" aria-live="polite"></p>
 
-            <!-- DIVIDER -->
-            <div class="col-divider"></div>
+            <!-- Toggle link para sa Create Account -->
+            <p class="toggle-signup">
+                You dont have an Avenzo Account?
+                <a href="#" id="showSignup">Create one here</a>
+            </p>
 
-            <!-- RIGHT: GUEST -->
-            <div class="login-col">
-                <h2>Guest Checkout</h2>
-                <p class="guest-text">Proceed and create an Avenzo Account later.</p>
-                <a href="ECOM.HTML" class="guest-btn">Continue as Guest</a>
-                <p class="guest-hint" id="guestHint" aria-live="polite"></p>
-            </div>
-
+            <!-- CREATE ACCOUNT FORM (hidden by default) -->
+            <form class="signup-form" id="signupForm" style="display:none;" onsubmit="return false;">
+                <h2>Create Avenzo Account</h2>
+                <div class="input-wrap">
+                    <input type="email" id="signupEmail" placeholder="Email" required>
+                </div>
+                <div class="input-wrap">
+                    <input type="password" id="signupPassword" placeholder="Password (min 6 characters)" required minlength="6">
+                </div>
+                <button type="submit" class="guest-btn" id="signupBtn">Create Account</button>
+                <p class="signup-hint" id="signupHint" aria-live="polite"></p>
+            </form>
         </div>
-    </section>
+
+        <!-- DIVIDER -->
+        <div class="col-divider"></div>
+
+        <!-- RIGHT: GUEST -->
+        <div class="login-col">
+            <h2>Guest Checkout</h2>
+            <p class="guest-text">Proceed and create an Avenzo Account later.</p>
+            <a href="ECOM.HTML" class="guest-btn">Continue as Guest</a>
+            <p class="guest-hint" id="guestHint" aria-live="polite"></p>
+        </div>
+
+    </div>
+</section>
 
 </body>
 </html>
