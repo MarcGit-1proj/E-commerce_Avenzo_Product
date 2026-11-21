@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../Css-file/style.css">
     <link rel="stylesheet" href="../Css-file/LOGIN.CSS">
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../js-script/config.js" defer></script>
     <script src="../js-script/auth.js" defer></script>
     <script src="../js-script/script.js" defer></script>
 </head>
@@ -22,7 +23,6 @@
                 <div class="dropdown1"><p class="dropdown-home">Products</p></div>
                 <div class="dropdown2"><p class="font-support">Support</p></div>
                 <div class="dropdown3"><p class="font-about-avenzo">About Avenzo</p></div>
-                <div class="dropdown4"><p class="font-contact">Sign up</p></div>
             </div>
         </div>
     </nav>
@@ -43,6 +43,10 @@
                 </div>
                 <div class="input-wrap">
                     <input type="password" id="loginPassword" placeholder="Password" required>
+                    <button type="button" class="toggle-password" data-target="loginPassword" aria-label="Show password">
+                        <svg class="icon-eye" viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M12 5c-5 0-9.27 3.11-11 7 1.73 3.89 6 7 11 7s9.27-3.11 11-7c-1.73-3.89-6-7-11-7zm0 12a5 5 0 1 1 0-10 5 5 0 0 1 0 10zm0-8a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/></svg>
+                        <svg class="icon-eye-off" viewBox="0 0 24 24" width="18" height="18" style="display:none"><path fill="currentColor" d="M2 4.27l2.28 2.28A11.1 11.1 0 0 0 1 12c1.73 3.89 6 7 11 7 1.52 0 2.97-.3 4.27-.84l2.49 2.49L20 19.4 3.27 2.67 2 4.27zm13.73 9.46l-1.5-1.5c.17-.42.27-.87.27-1.23a3 3 0 0 0-3-3c-.36 0-.81.1-1.23.27L8.76 6.76C9.77 6.28 10.86 6 12 6c5 0 9.27 3.11 11 7-.53 1.19-1.3 2.27-2.27 3.14l-1.73-1.73-1.27-1.68z"/></svg>
+                    </button>
                     <button type="submit" class="arrow-btn" aria-label="Submit">&#8594;</button>
                 </div>
             </form>
@@ -68,6 +72,10 @@
                 </div>
                 <div class="input-wrap">
                     <input type="password" id="signupPassword" placeholder="Password (min 6 characters)" required minlength="6">
+                    <button type="button" class="toggle-password" data-target="signupPassword" aria-label="Show password">
+                        <svg class="icon-eye" viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M12 5c-5 0-9.27 3.11-11 7 1.73 3.89 6 7 11 7s9.27-3.11 11-7c-1.73-3.89-6-7-11-7zm0 12a5 5 0 1 1 0-10 5 5 0 0 1 0 10zm0-8a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/></svg>
+                        <svg class="icon-eye-off" viewBox="0 0 24 24" width="18" height="18" style="display:none"><path fill="currentColor" d="M2 4.27l2.28 2.28A11.1 11.1 0 0 0 1 12c1.73 3.89 6 7 11 7 1.52 0 2.97-.3 4.27-.84l2.49 2.49L20 19.4 3.27 2.67 2 4.27zm13.73 9.46l-1.5-1.5c.17-.42.27-.87.27-1.23a3 3 0 0 0-3-3c-.36 0-.81.1-1.23.27L8.76 6.76C9.77 6.28 10.86 6 12 6c5 0 9.27 3.11 11 7-.53 1.19-1.3 2.27-2.27 3.14l-1.73-1.73-1.27-1.68z"/></svg>
+                    </button>
                 </div>
                 <button type="submit" class="guest-btn" id="signupBtn">Create Account</button>
                 <p class="signup-hint" id="signupHint" aria-live="polite"></p>
