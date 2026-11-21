@@ -817,6 +817,11 @@ a {
     cursor: pointer;
     padding: 14px 5px;
     transition: color .25s ease;
+<<<<<<< HEAD
+=======
+    display: flex;
+    align-items: center;
+>>>>>>> 6dbbe80c359d6b5ea6a63febcc2d30f339a472a7
 }
 
 .font-home {
@@ -824,8 +829,17 @@ a {
     font-size: 13px;
     text-decoration: none;
     transition: color .25s ease;
+<<<<<<< HEAD
+=======
+    margin: 0;
+    line-height: normal;
+>>>>>>> 6dbbe80c359d6b5ea6a63febcc2d30f339a472a7
 }
 
 .dropdown0:hover .font-home {
     color: red;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 6dbbe80c359d6b5ea6a63febcc2d30f339a472a7
