@@ -8,17 +8,23 @@ document.addEventListener('DOMContentLoaded', () => {
     const summaryMonthly = document.getElementById('summaryMonthly');
     const addToBagBtn = document.getElementById('addToBagBtn');
 
+    // --- QUANTITY SELECTOR ELEMENT REFERENCES ---
+    const qtyMinusBtn = document.getElementById('qtyMinus');
+    const qtyPlusBtn = document.getElementById('qtyPlus');
+    const qtyValueDisplay = document.getElementById('qtyValue');
+    let quantity = 1;
+
     const defaultConfig = {
-        color: 'Silver',
+        color: 'Ice Blue',
         storage: '256GB',
-        storagePrice: 55000,
+        storagePrice: 35000,
         care: 'No AvenzoCare Coverage',
         carePrice: 0
     };
 
     let config = { ...defaultConfig };
     try {
-        const saved = JSON.parse(localStorage.getItem('avenzoLaptopConfig'));
+        const saved = JSON.parse(localStorage.getItem('avenzoPhoneX1Config'));
         if (saved && typeof saved === 'object') {
             config = { ...defaultConfig, ...saved };
         }
@@ -62,12 +68,12 @@ document.addEventListener('DOMContentLoaded', () => {
             card.classList.toggle('active', card.dataset.care === config.care);
         });
 
-        localStorage.setItem('avenzoLaptopConfig', JSON.stringify(config));
+        localStorage.setItem('avenzoPhoneX1Config', JSON.stringify(config));
     }
 
     swatches.forEach((swatch) => {
         swatch.addEventListener('click', () => {
-            config.color = swatch.dataset.color || 'Silver';
+            config.color = swatch.dataset.color || 'Ice Blue';
             renderSummary();
         });
     });
@@ -88,37 +94,80 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // ======================================================
+    // QUANTITY SELECTOR LOGIC
+    // ======================================================
+    if (qtyMinusBtn && qtyPlusBtn && qtyValueDisplay) {
+        qtyMinusBtn.addEventListener('click', () => {
+            if (quantity > 1) {
+                quantity -= 1;
+                qtyValueDisplay.textContent = quantity;
+            }
+        });
+
+        qtyPlusBtn.addEventListener('click', () => {
+            quantity += 1;
+            qtyValueDisplay.textContent = quantity;
+        });
+    }
+    // ======================================================
+    // END OF QUANTITY SELECTOR LOGIC
+    // ======================================================
+
+    // ======================================================
+    // ADD TO BAG LOGIC
+    // ======================================================
     if (addToBagBtn) {
         addToBagBtn.addEventListener('click', () => {
-            const total = (Number(config.storagePrice) || 0) + (Number(config.carePrice) || 0);
+            const unitPrice = (Number(config.storagePrice) || 0) + (Number(config.carePrice) || 0);
+            const total = unitPrice * quantity;
+
             const cartCount = document.querySelector('.cart-count');
             const cartDropdown = document.getElementById('cartDropdown');
 
             if (cartCount) {
-                cartCount.textContent = (Number(cartCount.textContent) || 0) + 1;
+                cartCount.textContent = (Number(cartCount.textContent) || 0) + quantity;
             }
 
             if (cartDropdown) {
                 const emptyMsg = cartDropdown.querySelector('.cart-empty-msg');
                 if (emptyMsg) emptyMsg.remove();
 
-                const row = document.createElement('div');
-                row.style.padding = '10px 0';
-                row.style.borderBottom = '1px solid rgba(255,255,255,0.15)';
-                row.innerHTML = `
-                    <p style="margin:0; font-weight:600; font-size:13px;">Phantom 1 Pro (${config.storage})</p>
-                    <p style="margin:2px 0 0; font-size:12px; color:#a1a1a6;">${config.color} • ${config.care}</p>
-                    <p style="margin:4px 0 0; font-size:13px; color:#fff;">₱${total.toLocaleString('en-PH')}</p>
-                `;
-                cartDropdown.appendChild(row);
+                const itemKey = `AvenzoX1-${config.storage}-${config.color}-${config.care}`;
+                let existingRow = cartDropdown.querySelector(`[data-key="${itemKey}"]`);
+
+                if (existingRow) {
+                    const newQty = (Number(existingRow.dataset.qty) || 1) + quantity;
+                    existingRow.dataset.qty = newQty;
+                    existingRow.querySelector('.item-price').textContent =
+                        `₱${(unitPrice * newQty).toLocaleString('en-PH')}`;
+                    existingRow.querySelector('.item-qty-badge').textContent = `x${newQty}`;
+                } else {
+                    const row = document.createElement('div');
+                    row.dataset.key = itemKey;
+                    row.dataset.qty = quantity;
+                    row.style.padding = '10px 0';
+                    row.style.borderBottom = '1px solid rgba(255,255,255,0.15)';
+                    row.innerHTML = `
+                        <p style="margin:0; font-weight:600; font-size:13px;">Avenzo X1 (${config.storage})</p>
+                        <p style="margin:2px 0 0; font-size:12px; color:#a1a1a6;">${config.color} • ${config.care}</p>
+                        <div style="margin:4px 0 0; display:flex; justify-content:space-between; align-items:center;">
+                            <span class="item-price" style="font-size:13px; color:#fff;">₱${total.toLocaleString('en-PH')}</span>
+                            <span class="item-qty-badge" style="font-size:12px; color:#a1a1a6;">x${quantity}</span>
+                        </div>
+                    `;
+                    cartDropdown.appendChild(row);
+                }
             }
 
-            addToBagBtn.textContent = 'Added to Bag ✓';
-            setTimeout(() => {
-                addToBagBtn.textContent = 'Add to Bag';
-            }, 1500);
+            // Reset quantity back to 1 after adding to the cart
+            quantity = 1;
+            if (qtyValueDisplay) qtyValueDisplay.textContent = quantity;
         });
     }
+    // ======================================================
+    // END OF ADD TO BAG LOGIC
+    // ======================================================
 
     const video = document.getElementById('myVideo');
     if (video) {
