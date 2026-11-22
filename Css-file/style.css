@@ -987,105 +987,53 @@ a {
 
 .footer-block {
     background-color: black;
-    height: 300px;
-    width: 105%;
-    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 50px 0;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
-    z-index: 900;
 }
 
 .footer-block a:hover {
     color: white;
 }
 
-
-.footer-element-font1 {
-    width: 300px;
-    height: 200px;
-    top: 50px;
-    left: 200px;
-    position: relative;
-}
-
-.footer-element-font1 p{
-   color: rgba(255, 255, 255, .8);
-   gap: 10px;
-}
-
-.footer-element-font1 a{
-   color: rgba(255, 255, 255, .8);
-   gap: 10px;
-   font-size: 13px;
-   padding-top: 10px;
-}
-
-.footer-element-font2 {
-    width: 300px;
-    height: 200px;
-    bottom: 147px;
-    left: 400px;
-    position: relative;
-}
-
-.footer-element-font2 p{
-   color: rgba(255, 255, 255, .8);
-   gap: 10px;
-   cursor: default;
-}
-
-.footer-element-font2 a{
-   color: rgba(255, 255, 255, .8);
-   gap: 10px;
-   font-size: 13px;
-   padding-top: 10px;
-}
-
-.footer-element-font3 {
-    width: 300px;
-    height: 200px;
-    bottom: 365px;
-    left: 650px;
-    position: relative;
-}
-
-.footer-element-font3 p{
-   color: rgba(255, 255, 255, .8);
-   gap: 10px;
-   cursor: default;
-}
-
-.footer-element-font3 a{
-   color: rgba(255, 255, 255, .8);
-   gap: 10px;
-   font-size: 13px;
-   padding-top: 10px;   
-}
-
-.footer-element-font4 {
-    width: 300px;
-    height: 200px;
-    bottom: 580px;
-    left: 850px;
-    position: relative;
-}
-
-.footer-element-font4 p{
-   color: rgba(255, 255, 255, .8);
-   gap: 10px;
-   cursor: default;
-}
-
-.footer-element-font4 a{
-   color: rgba(255, 255, 255, .8);
-   gap: 10px;
-   font-size: 13px;
-   padding-top: 10px;   
-}
-
 .footer-block-main {
-    position: relative;
-    left: 180px;
-    height: 300px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.footer-element-font1,
+.footer-element-font2,
+.footer-element-font3,
+.footer-element-font4 {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-element-font1 p,
+.footer-element-font2 p,
+.footer-element-font3 p,
+.footer-element-font4 p {
+    color: rgba(255, 255, 255, .8);
+    font-weight: 600;
+    margin: 0 0 8px 0;
+    cursor: default;
+}
+
+.footer-element-font1 a,
+.footer-element-font2 a,
+.footer-element-font3 a,
+.footer-element-font4 a {
+    color: rgba(255, 255, 255, .8);
+    font-size: 13px;
+    padding-top: 6px;
 }
 
 .dropdown0 {
@@ -1094,7 +1042,6 @@ a {
     transition: color .25s ease;
     display: flex;
     align-items: center;
-
 }
 
 .font-home {
@@ -1102,7 +1049,6 @@ a {
     font-size: 13px;
     text-decoration: none;
     transition: color .25s ease;
-
     margin: 0;
     line-height: normal;
 }
