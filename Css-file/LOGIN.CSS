@@ -54,7 +54,6 @@
     border-radius: 8px;
     overflow: hidden;
     max-width: 320px;
-    margin-bottom: 14px;
 }
 
 .input-wrap input {
@@ -117,10 +116,6 @@
     border-top: 1px solid #ddd;
 }
 
-.signup-form .guest-btn {
-    margin-top: 4px;
-}
-
 /* ============================
    GUEST CHECKOUT
    ============================ */
@@ -179,23 +174,6 @@
 
 .guest-hint.show {
     opacity: 1;
-}
-
-/* ============================
-   SHOW/HIDE PASSWORD TOGGLE
-   ============================ */
-.toggle-password {
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 12px 10px;
-    color: #6e6e73;
-    display: flex;
-    align-items: center;
-}
-
-.toggle-password:hover {
-    color: #1d1d1f;
 }
 
 /* ============================
