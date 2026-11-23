@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avenzo | Next-Gen Tech</title>
+    <link rel="stylesheet" href="../Css-file/PHANTOM-PHONES.CSS">
+    <script src="../js-script/phantom-page.js" defer></script>
+</head>
+<body userselect="false" draggable="false">
+    <nav class="top-block">
+        <div class="nav-content">
+            <div class="navigation-element-photos">
+                <img src="../images-png/LogoNew.png" alt="Logo" class="logo" draggable="false">
+            </div>
+            
+            <div class="element-top">    
+                <div class="dropdown1">
+                    <p class="dropdown-home">Products</p>
+                </div>
+                <div class="dropdown2">
+                    <p class="font-support">Support</p>
+                </div>
+                <div class="dropdown3">
+                    <p class="font-about-avenzo">About Avenzo</p>
+                </div>
+            </div>           
+            <div class="nav-right-icons">
+                <div class="search-container">
+                    <button class="search-icon" onclick="toggleSearch()">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(255, 255, 255, .8)" stroke-width="2">
+                            <circle cx="11" cy="11" r="7"></circle>
+                            <line x1="16" y1="16" x2="21" y2="21"></line>
+                        </svg>
+                    </button>
+                    <div class="search-dropdown" id="searchBar">
+                        <input type="text" class="search-font" placeholder="Search Avenzo...">
+                    </div>
+                </div>
+
+                <div class="cart-container">
+                    <button class="cart-icon" onclick="toggleCart()">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(255, 255, 255, .8)" stroke-width="2">
+                            <circle cx="9" cy="21" r="1"></circle>
+                            <circle cx="20" cy="21" r="1"></circle>
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                        </svg>
+                    </button>
+                    <span class="cart-count">0</span>
+
+                    <div class="cart-dropdown" id="cartDropdown">
+                        <p class="cart-empty-msg">No order yet</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="dropdown-content-home" id="dropdownHome">
+        <div class="dropdown-col">
+            <span class="col-label">Browse Products</span>
+            <a href="PHANTOM-PHONES.HTML">Avenzo Phones</a>
+            <a href="LAPTOPS.HTML">Laptops</a>
+            <a href="AUDIO-MUSIC.HTML">Audio &amp; Sound</a>
+            <a href="WEARABLES.HTML">Wearables</a>
+        </div>
+    </div>
+
+    <div class="dropdown-content-support" id="dropdownSupport">
+        <div class="dropdown-col">
+            <span class="col-label">Device Support</span>
+            <a href="PHONES-HELP.HTML">Phones Help</a>
+            <a href="LAPTOPS-HELP.HTML">Laptops Help</a>
+            <a href="AUDIO-CARE.HTML">Audio Care</a>
+            <a href="WEARABLES-HELP.HTML">Wearables Support</a>
+        </div>
+        <div class="dropdown-col">
+            <span class="col-label">Customer Care</span>
+            <a href="CHECK-WARRANTY.HTML">Check Warranty</a>
+            <a href="REQUEST-REPAIR.HTML">Request Repair</a>
+        </div>
+        <div class="dropdown-col">
+            <span class="col-label">Quick Links</span>
+            <a href="AVENZO-CAREPLUS.HTML">Avenzo Care+</a>
+            <a href="#">Billing &amp; Orders</a>
+        </div>
+    </div>
+
+    <div class="about-avenzo" id="font-about-avenzo">
+        <div class="dropdown-col">
+            <span class="col-label">About Avenzo</span>
+        </div>
+    </div>
+
+    <div class="video-laptop1">
+        <div class="video-container">
+            <video autoplay muted loop playsinline id="myVideo">
+                <source src="../videos-clips/laptop2.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+
+    <div class="photo-phantom1">
+        <div class="phantom-photo-element">
+            <img src="../images-png/phantom-photo1.png" draggable="false">
+        </div>
+    </div>
+
+    <div class="color-group">
+        <div class="font-color-picker">
+            <p class="color-font1">Phantom 1 Pro</p>
+            <p class="color-font2">Pick your color</p>
+        </div>
+        <div class="swatch-group" role="radiogroup" aria-label="Choose a color">
+            <button 
+              type="button" 
+              class="swatch active" 
+              style="--swatch-color: #D5D6D8;" 
+              data-color="Silver" 
+              aria-label="Silver"
+              aria-checked="true">
+            </button>
+            
+            <button 
+              type="button" 
+              class="swatch" 
+              style="--swatch-color: #C9C0B5;" 
+              data-color="Blush" 
+              aria-label="Blush"
+              aria-checked="false">
+            </button>
+            
+            <button 
+              type="button" 
+              class="swatch" 
+              style="--swatch-color: #A6B7C7;" 
+              data-color="Citrus" 
+              aria-label="Citrus"
+              aria-checked="false">
+            </button>
+            
+            <button 
+              type="button" 
+              class="swatch" 
+              style="--swatch-color: #323C4B;" 
+              data-color="Indigo" 
+              aria-label="Indigo"
+              aria-checked="false">
+            </button>
+        </div>
+    </div>
+
+    <div class="storage-header">
+        <p class="storage-text1">Storage</p>
+        <p class="storage-text2">How much space do you need?</p>
+    </div>
+    <div class="storage-font-group">
+        <div class="storage-product1 active" data-storage="256GB" data-price="55000">
+            <p class="storage1">256GB</p>
+            <p class="storage-side-1">Buy from ₱55000 or ₱2291/mo. per month for 24 mo.<br>
+            Lease from ₱1608.99/mo. per month for 24 mo.</p>
+        </div>
+        <div class="storage-product2" data-storage="512GB" data-price="68000">
+            <p class="storage2">512GB</p>
+            <p class="storage-side-2">Buy from ₱68000 or ₱2833.33/mo. per month for 24 mo.<br>
+            Lease from ₱1988.70/mo. per month for 24 mo.</p>
+        </div>
+        <div class="storage-product3" data-storage="1TB" data-price="81000">
+            <p class="storage3">1TB</p>
+            <p class="storage-side-3">Buy from ₱81000 or ₱3375/mo. per month for 24 mo.<br>
+            Lease from ₱2368/mo. per month for 24 mo.</p>
+        </div>
+    </div>
+
+    <div class="specs-block">
+        <div class="specs-block-header">
+            <p class="specs-header-text1">Specifications</p>
+            <p class="specs-header-text2">Explore the hardware behind the performance.</p>
+        </div>
+        <div class="specification-grid">
+            <div class="specs-grid1">
+                <p class="specs-grid-header1">Processor</p>
+                <p class="specs-grid-text1">Intel® Core™ Ultra 5<br>s 225H (14 cores: 4 Performance + 8 Efficient + 2 Low Power Efficient,<br> up to 4.9 GHz)</p>
+            </div>
+            <div class="specs-grid2">
+                <p class="specs-grid-header2">Memory</p>
+                <p class="specs-grid-text2">16GB LPDDR5X RAM</p>
+            </div>
+            <div class="specs-grid3">
+                <p class="specs-grid-header3">Display</p>
+                <p class="specs-grid-text3">14-inch 2.8K OLED, 120Hz, 100% DCI-P3, 400 nits</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="care-block">
+        <div class="care-block-header">
+            <p class="care-header-text1">AvenzoCare+ Coverage</p>
+            <p class="care-header-text2">Peace of mind in every plan.</p>
+        </div>
+        <div class="care-font-group">
+            <div class="care-product1 active" data-care="No AvenzoCare Coverage" data-price="0">
+                <p class="care1">No AvenzoCare / AvenzoCare+ coverage</p>
+                <p class="care-side-1">No Product is cover</p>
+            </div>
+            <div class="care-product2" data-care="AvenzoCare" data-price="7990">
+                <p class="care2">AvenzoCare - ₱7,990</p>
+                <p class="care-side-2">Enjoy 24/7 priority expert assistance alongside unlimited certified repairs with genuine Avenzo parts for accidental drops and spills.</p>
+            </div>
+            <div class="care-product3" data-care="Avenzo Care+" data-price="10990">
+                <p class="care3">Avenzo Care+ - ₱10,990</p>
+                <p class="care-side-3">Get complete AvenzoCare+ benefits including theft and loss protection for<br>up to 3 individual devices with the freedom to add existing anytime.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="delivery-header">
+        <div class="delivery-text-head">
+            <p class="delivery-header-text1">Make it yours</p>
+        </div>
+    </div>
+    <div class="delivery-block">
+        <div class="delivery-element">
+            <img src="../images-png/delivericon.png" draggable="false">
+            <p class="delivery-font-text1">Delivery:</p>
+            <p class="delivery-font-text2">Free Shipping</p>
+            <a href="#" class="delivery-a">Get delivery dates</a>
+        </div>
+        <div class="pickup-element">
+            <img src="../images-png/pickupicon.png" draggable="false">
+            <p class="pickup-font-text1">Pickup:</p>
+            <a href="#" class="pickup-a">Get delivery dates</a>
+        </div>
+    </div>
+
+    <div class="order-summary-block">
+        <div class="summary-details">
+            <h3 class="summary-title">Your Phantom 1 Pro</h3>
+            <p class="summary-specs" id="summaryText">256GB • Silver • No AvenzoCare Coverage</p>
+        </div>
+        <div class="summary-checkout">
+            <div class="summary-price-box">
+                <span class="summary-total" id="summaryTotal">₱55,000</span>
+                <span class="summary-monthly" id="summaryMonthly">or ₱2,291.67/mo. for 24 mo.</span>
+            </div>
+            <button type="button" class="add-to-bag-btn" id="addToBagBtn">Add to Bag</button>
+        </div>
+    </div>
+    <div class="whatsinthebox-block">
+        <p class="whats-header">What's in the Box</p>
+        <div class="whats-img">
+        <img src="..//images-png/whatsinthebox.png" draggable="false">
+        </div>
+    </div>
+
+    <div class="footer-block">
+        <div class="footer-block-main">
+            <div class="footer-element-font1">
+                <p>Shop and Learn</p><br>
+                <a href="#">Store</a><br>
+                <a href="#">Audio and Sound</a><br>
+                <a href="#">Phone</a><br>
+                <a href="#">Watch</a><br>
+                <a href="#">Laptop</a>
+            </div>
+            <div class="footer-element-font2">
+                <p>Account</p><br>
+                <a href="#">Manage Your Avenzo Account</a><br>
+                <a href="#">Account Deletion</a>
+            </div>
+            <div class="footer-element-font3">
+                <p>Popular Links</p><br>
+                <a href="#">Harmonic 1</a><br>
+                <a href="#">Watch S1</a><br>
+                <a href="#">X700</a>
+            </div>
+            <div class="footer-element-font4">
+                <p>Support</p><br>
+                <a href="PHONES-HELP.HTML">Phone Help</a><br>
+                <a href="LAPTOPS-HELP.HTML">Laptop Help</a><br>
+                <a href="AUDIO-CARE.HTML">Audio Care</a><br>
+                <a href="CHECK-WARRANTY.HTML">Check Warranty</a><br>
+                <a href="REQUEST-REPAIR.HTML">Request Repair</a><br>
+                <a href="AVENZO-CAREPLUS.HTML">Avenzo Care+</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
