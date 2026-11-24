@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Care | Avenzo</title>
+    <link rel="stylesheet" href="../Css-file/style.css">
+    <link rel="stylesheet" href="../Css-file/AUDIO-CARE.CSS">
+    <script src="../js-script/script.js" defer></script>
+</head>
+<body>
+    <nav class="top-block">
+        <div class="nav-content">
+            <div class="navigation-element-photos">
+                <img src="../images-png/LogoNew.png" alt="Logo" class="logo" draggable="false">
+            </div>
+            <div class="element-top">
+                <div class="dropdown0"><a href="ECOM.HTML" class="font-home">Home</a></div>
+                <div class="dropdown1"><p class="dropdown-home">Products</p></div>
+                <div class="dropdown2"><p class="font-support">Support</p></div>
+                <div class="dropdown3"><p class="font-about-avenzo">About Avenzo</p></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- PRODUCTS DROPDOWN PANEL -->
+    <div class="dropdown-content-home" id="dropdownHome">
+        <div class="dropdown-col">
+            <span class="col-label">Browse Products</span>
+            <a href="products-phone.html">Avenzo Phones</a>
+            <a href="products-laptop.html">Laptops</a>
+            <a href="products-wearable.html">Wearables</a>
+        </div>
+    </div>
+
+    <!-- SUPPORT DROPDOWN PANEL -->
+    <div class="dropdown-content-support" id="dropdownSupport">
+        <div class="dropdown-col">
+            <span class="col-label">Device Support</span>
+            <a href="PHONES-HELP.HTML">Phones Help</a>
+            <a href="LAPTOPS-HELP.HTML">Laptops Help</a>
+            <a href="AUDIO-CARE.HTML">Audio Care</a>
+            <a href="WEARABLES-HELP.HTML">Wearables Support</a>
+        </div>
+        <div class="dropdown-col">
+            <span class="col-label">Customer Care</span>
+            <a href="CHECK-WARRANTY.HTML">Check Warranty</a>
+            <a href="REQUEST-REPAIR.HTML">Request Repair</a>
+        </div>
+        <div class="dropdown-col">
+            <span class="col-label">Quick Links</span>
+            <a href="AVENZO-CAREPLUS.HTML">Avenzo Care+</a>
+        </div>
+    </div>
+
+    <!-- HERO -->
+    <section class="help-hero">       
+        <h1>Avenzo Audio Care</h1>
+        <p>Guides and fixes to keep your Avenzo audio sounding its best.</p>
+        <div class="help-search">
+            <input type="text" placeholder="Search for help topics...">
+        </div>
+
+        <!-- MODEL SELECTOR -->
+        <div class="model-select">
+            <label for="audioModel">Select your audio device</label>
+            <select id="audioModel">
+                <option value="buds1">Avenzo Buds 1</option>
+            </select>
+        </div>
+    </section>
+
+    <!-- HELP TOPIC GRID -->
+    <section class="help-grid">
+        <div class="help-card">
+            <div class="help-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#1d1d1f" stroke-width="1.5">
+                    <path d="M6.5 6.5l11 11L12 22V2l5.5 4.5-11 11"/>
+                </svg>
+            </div>
+            <h3>Pairing &amp; Connection</h3>
+            <p>Bluetooth pairing, connection drops, and multi-device switching.</p>
+            <a href="#">View guides &rarr;</a>
+        </div>
+
+        <div class="help-card">
+            <div class="help-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#1d1d1f" stroke-width="1.5">
+                    <rect x="2" y="7" width="18" height="10" rx="2"/>
+                    <line x1="22" y1="10" x2="22" y2="14"/>
+                    <line x1="6" y1="12" x2="14" y2="12"/>
+                </svg>
+            </div>
+            <h3>Battery &amp; Charging</h3>
+            <p>Charging case tips, battery life, and low-battery warnings.</p>
+            <a href="#">View guides &rarr;</a>
+        </div>
+
+        <div class="help-card">
+            <div class="help-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#1d1d1f" stroke-width="1.5">
+                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+                    <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
+                    <path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>
+                </svg>
+            </div>
+            <h3>Sound Quality</h3>
+            <p>Fix muffled audio, imbalance between earbuds, and EQ settings.</p>
+            <a href="#">View guides &rarr;</a>
+        </div>
+
+        <div class="help-card">
+            <div class="help-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#1d1d1f" stroke-width="1.5">
+                    <path d="M21 12a9 9 0 1 1-3-6.7"/>
+                    <polyline points="21 3 21 9 15 9"/>
+                </svg>
+            </div>
+            <h3>Firmware Updates</h3>
+            <p>How to update firmware and what's new in each release.</p>
+            <a href="#">View guides &rarr;</a>
+        </div>
+
+        <div class="help-card">
+            <div class="help-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#1d1d1f" stroke-width="1.5">
+                    <path d="M14.7 6.3a4 4 0 1 1-5.4 5.4L3 18v3h3l6.3-6.3"/>
+                    <path d="M16 8l2-2 2 2-2 2z"/>
+                </svg>
+            </div>
+            <h3>Repairs &amp; Warranty</h3>
+            <p>Check warranty status or request a repair.</p>
+            <a href="#">View guides &rarr;</a>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="help-faq">
+        <h2>Frequently Asked Questions</h2>
+        <details>
+            <summary>One earbud is quieter than the other</summary>
+            <p>Clean the mesh grille gently and check your balance setting in the Bluetooth audio settings.</p>
+        </details>
+        <details>
+            <summary>Earbuds won't pair</summary>
+            <p>Place both earbuds in the case, close the lid for 10 seconds, then reopen and try pairing again.</p>
+        </details>
+        <details>
+            <summary>Case isn't charging</summary>
+            <p>Check the charging cable and port for debris, and try a different power source.</p>
+        </details>
+        <details>
+            <summary>How do I update the firmware?</summary>
+            <p>Firmware updates install automatically when the earbuds are connected and charging near your phone.</p>
+        </details>
+    </section>
+    <div class="footer-block">
+    <div class="footer-block-main">
+    <div class="footer-element-font1">
+        <p href="#">Shop and Learn</p><br>
+        <a href="products-phone.html">Phone</a><br>
+        <a href="products-wearable.html">Wearables</a><br>
+        <a href="products-laptop.html">Laptop</a>
+    </div>
+    <div class="footer-element-font2">
+        <p href="#">Account</p><br>
+        <a href="#">Manage Your Avenzo Account</a><br>
+        <a href="#">Account Deletion</a>
+    </div>
+    <div class="footer-element-font3">
+        <p href="#">Popular Links</p><br>
+        <a href="PHANTOM-PHONES.HTML">Phantom 1 Pro</a><br>
+        <a href="harmonic1.html">Harmonic 1</a><br>
+        <a href="watchs1.html">Watch S1</a><br>
+        <a href="x700.html">X700</a>
+    </div>
+     <div class="footer-element-font4">
+        <p href="#">Support</p><br>
+        <a href="PHONES-HELP.HTML">Phone Help</a><br>
+        <a href="LAPTOPS-HELP.HTML">Laptop Help</a><br>
+        <a href="AUDIO-CARE.HTML">Audio Care</a><br>
+        <a href="CHECK-WARRANTY.HTML">Check Warranty</a><br>
+        <a href="REQUEST-REPAIR.HTML">Request Repair</a><br>
+         <a href="AVENZO-CAREPLUS.HTML">Avenzo Care+</a>
+    </div>
+    </div>
+</div>
+
+</body>
+</html>
